@@ -42,6 +42,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func createRestaurant(_ sender: UIButton) {
+
+        guard formIsValide else {
+            return
+        }
+
+        print(addressTextField.text!, nameTextField.text!, fastSwitch.isOn, gradeSlider.value)
     }
 
 }
