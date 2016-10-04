@@ -14,7 +14,23 @@ class ViewController: UIViewController {
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var fastSwitch: UISwitch!
     @IBOutlet weak var gradeSlider: UISlider!
-    
+
+    var formIsValide: Bool {
+        guard let name = nameTextField.text else {
+            return false
+        }
+
+        guard let address = addressTextField.text else {
+            return false
+        }
+
+        guard !name.isEmpty && !address.isEmpty else {
+            return false
+        }
+        
+        return true
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
