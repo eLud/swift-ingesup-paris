@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var fastSwitch: UISwitch!
     @IBOutlet weak var gradeSlider: UISlider!
 
+    var storage = Storage()
+
     var formIsValide: Bool {
         guard let name = nameTextField.text else {
             return false
@@ -47,7 +49,8 @@ class ViewController: UIViewController {
             return
         }
 
-        print(addressTextField.text!, nameTextField.text!, fastSwitch.isOn, gradeSlider.value)
+        let resto = Restaurant(name: nameTextField.text!, address: addressTextField.text!, isFast: fastSwitch.isOn, grade: gradeSlider.value)
+        storage.add(resto)
     }
 
 }
