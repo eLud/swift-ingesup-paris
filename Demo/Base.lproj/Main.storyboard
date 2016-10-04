@@ -72,10 +72,19 @@
                                 <frame key="frameInset" minX="164" minY="184" width="47" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Valider"/>
+                                <connections>
+                                    <action selector="createRestaurant:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9uJ-CC-nTh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="addressTextField" destination="nkc-3U-a8G" id="e7e-K6-PtJ"/>
+                        <outlet property="fastSwitch" destination="9Vf-N2-VXx" id="gPu-eV-49i"/>
+                        <outlet property="gradeSlider" destination="9hq-je-NUe" id="1Ln-NP-LIh"/>
+                        <outlet property="nameTextField" destination="I4M-gp-PS2" id="Koo-nX-xhe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
