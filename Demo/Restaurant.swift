@@ -8,7 +8,16 @@
 
 import Foundation
 
-struct Restaurant: Equatable {
+protocol Mappable {
+    var title: String {get}
+    var address: String {get}
+}
+
+struct Restaurant: Equatable, Mappable {
+
+    var title: String {
+        return name
+    }
 
     let name: String
     let address: String
