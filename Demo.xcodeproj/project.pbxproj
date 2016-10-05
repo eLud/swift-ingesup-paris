@@ -14,6 +14,7 @@
 		330506391DA296B500EF0A33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330506371DA296B500EF0A33 /* LaunchScreen.storyboard */; };
 		330506411DA3DD3300EF0A33 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330506401DA3DD3300EF0A33 /* Restaurant.swift */; };
 		33DD75751DA3EC9900AA13AC /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DD75741DA3EC9900AA13AC /* Storage.swift */; };
+		33DD75971DA4F9E800AA13AC /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DD75961DA4F9E800AA13AC /* ListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3305063A1DA296B500EF0A33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		330506401DA3DD3300EF0A33 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		33DD75741DA3EC9900AA13AC /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		33DD75961DA4F9E800AA13AC /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				33DD75741DA3EC9900AA13AC /* Storage.swift */,
 				330506401DA3DD3300EF0A33 /* Restaurant.swift */,
 				330506321DA296B500EF0A33 /* Main.storyboard */,
+				33DD75961DA4F9E800AA13AC /* ListTableViewController.swift */,
 				330506351DA296B500EF0A33 /* Assets.xcassets */,
 				330506371DA296B500EF0A33 /* LaunchScreen.storyboard */,
 				3305063A1DA296B500EF0A33 /* Info.plist */,
@@ -146,6 +149,7 @@
 				330506311DA296B500EF0A33 /* ViewController.swift in Sources */,
 				33DD75751DA3EC9900AA13AC /* Storage.swift in Sources */,
 				3305062F1DA296B500EF0A33 /* AppDelegate.swift in Sources */,
+				33DD75971DA4F9E800AA13AC /* ListTableViewController.swift in Sources */,
 				330506411DA3DD3300EF0A33 /* Restaurant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
