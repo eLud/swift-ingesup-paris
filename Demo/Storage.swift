@@ -17,6 +17,11 @@ class Storage {
     }
 
     func add(_ restaurant: Restaurant) {
+
+        if storageArray.contains(restaurant) {
+            return
+        }
+        
         storageArray.append(restaurant)
     }
 }

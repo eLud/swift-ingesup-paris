@@ -8,10 +8,18 @@
 
 import Foundation
 
-struct Restaurant {
+struct Restaurant: Equatable {
 
     let name: String
     let address: String
     var isFast: Bool
     var grade: Float
+
+    static func ==(lhs: Restaurant, rhs: Restaurant) -> Bool {
+
+        if lhs.name == rhs.name && lhs.address == rhs.address {
+            return true
+        }
+        return false
+    }
 }
