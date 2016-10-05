@@ -10,9 +10,12 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
 
+    var storage = Storage()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let resto = Restaurant(name: "Test", address: "Test", isFast: true, grade: 5.0)
+        storage.add(resto)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,14 +32,17 @@ class ListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return storage.allRestaurants.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "restoCell2", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "restoCell", for: indexPath)
 
         // Configure the cell...
+        let resto = storage.allRestaurants[indexPath.row]
+        cell.textLabel?.text = resto.name
+        cell.detailTextLabel?.text = resto.address
 
         return cell
     }
