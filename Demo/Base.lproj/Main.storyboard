@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ueA-ED-asB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="L4w-nV-ezL">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List Table View Controller-->
+        <!--Restos-->
         <scene sceneID="MI7-cB-TUc">
             <objects>
                 <tableViewController id="ueA-ED-asB" customClass="ListTableViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,7 +16,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="restoCell" textLabel="g7M-Hj-ReC" detailTextLabel="alG-fB-xOW" style="IBUITableViewCellStyleSubtitle" id="uDh-vT-J4T">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uDh-vT-J4T" id="MP1-Bp-waU">
                                     <frame key="frameInset" width="375" height="43"/>
@@ -39,9 +39,12 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.27058823529999998" green="0.81176470590000005" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="3uV-MA-XT2" kind="show" identifier="Details" id="sE7-Qp-aeU"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="restoCell2" textLabel="wwd-Ug-UwJ" style="IBUITableViewCellStyleDefault" id="zZL-Qh-1PY">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="136" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zZL-Qh-1PY" id="vqA-t7-XY5">
                                     <frame key="frameInset" width="375" height="43"/>
@@ -64,15 +67,45 @@
                             <outlet property="delegate" destination="ueA-ED-asB" id="Gue-Pv-Ov2"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Restos" id="7Kk-vG-mI0">
+                        <barButtonItem key="leftBarButtonItem" title="Refresh" id="BXM-e0-SEU">
+                            <connections>
+                                <action selector="refreshTableView:" destination="ueA-ED-asB" id="iPo-tq-hcV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="k0E-LX-aje">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="Form" id="9Ao-bM-aJR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mWI-Ip-SuK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-837" y="81"/>
+            <point key="canvasLocation" x="101.59999999999999" y="80.50974512743629"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="URh-pz-dsg">
+            <objects>
+                <viewController id="3uV-MA-XT2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tIA-hN-iKG"/>
+                        <viewControllerLayoutGuide type="bottom" id="AzC-j0-VNw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A7d-Cj-yzd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.80784314869999996" green="0.23137255009999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R3h-FN-Oew" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1153" y="328"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Form" id="BYZ-38-t0r" customClass="ViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -151,7 +184,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="15" y="109"/>
+            <point key="canvasLocation" x="1175" y="-326"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UXj-Mh-vPH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L4w-nV-ezL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eKf-ht-bcx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ueA-ED-asB" kind="relationship" relationship="rootViewController" id="xzQ-lz-303"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fUp-Pt-0pI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-837.60000000000002" y="80.50974512743629"/>
         </scene>
     </scenes>
 </document>
